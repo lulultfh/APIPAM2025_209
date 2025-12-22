@@ -53,7 +53,7 @@ router.post("/login", (req, res) => {
 
   db.query("select * from `user` where username = ?", [username], (err,result)=>{
     if(err) return res.status(500).json({error: err});
-    if (result.length = 0)
+    if (result.length === 0)
       return res.status(400).json({ message: "Username tidak ditemukan" });
 
     const user = result[0]
