@@ -11,9 +11,9 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use('/user', userRoutes);
-app.use('/product', productRoutes);
-app.use('/order', orderRoutes);
-app.use('/order-item', itemOrderRoutes);
+app.use('/product', productRoutes); 
+app.use('/pesanan', orderRoutes);
+app.use('/pesanan-item', itemOrderRoutes);
 app.listen(3000,'0.0.0.0', () => {
     console.log("Server berjalan di port 3000");
 });
